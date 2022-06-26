@@ -5,9 +5,9 @@
   }
   
   .box2 {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 90%;
-    height: 500px;
+    height: 550px;
     box-shadow: rgba(104, 102, 102, 0.705) 0px 5px 15px;
   }
   .head p{
@@ -81,4 +81,9 @@
 }
 .form-control:focus{
   box-shadow:none;
+}
+
+.div1
+{
+  font-size: 12px;
 }

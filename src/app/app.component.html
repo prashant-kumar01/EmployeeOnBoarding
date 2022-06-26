@@ -8,34 +8,49 @@
     <div class="line-right border-bottom border-primary px-3 py-1"></div>
   </div>
   <div class="head2"><p>REFERENCE 1</p></div>
-  <form class="form-group pb-3" action="">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate class="form-group pb-3" action="">
     <div class="row">
         <div class="col-4 form-floating mb-3 mt-3 ">
             <input type="text" class="reference-input form-control border-0 border-bottom border-secondary " id="name"
-                placeholder="Name" name="name">
+                placeholder="Name" name="name" formControlName="name">
+                <div style="color: red;"class="div1" *ngIf="!name?.valid && (name?.dirty ||name?.touched)">
+                    Enter a valid name.
+                  </div>
             <label for="name" class="text-secondary">Name <span class="text-danger">*</span></label>
         </div>
         <div class="col-4 form-floating mb-3 mt-3">
             <input type="text" class="reference-input form-control border-0 border-bottom border-secondary"
-                id="designation" placeholder="Designation" name="designation">
+                id="designation" placeholder="Designation" name="desg" formControlName="desg">
+                <div style="color: red;"class="div1" *ngIf="!desg?.valid && (desg?.dirty ||desg?.touched)">
+                    Enter Designation.
+                  </div>
             <label for="designation" class="text-secondary">Designation <span class="text-danger">*</span></label>
         </div>
         <div class="col-4 form-floating mb-3 mt-3">
             <input type="text" class="reference-input form-control border-0 border-bottom border-secondary" id="company"
-                placeholder="company" name="company">
+                placeholder="company"  name="company" formControlName="company">
+                <div style="color: red;"class="div1" *ngIf="!company?.valid && (company?.dirty ||company?.touched)">
+                    Enter Company.
+                  </div>
             <label for="company" class="text-secondary">Company <span class="text-danger">*</span></label>
         </div>
     </div>
     <div class="row ">
         <div class="col-4 form-floating mb-3 mt-3">
             <input type="text" class="reference-input form-control border-0 border-bottom border-secondary" id="email"
-                placeholder="email" name="email">
-            <label for="email" class="text-secondary">Email ID <span class="text-danger">*</span></label>
+            name="email" formControlName="email"  placeholder="email" >
+                <div style="color: red;"class="div1" *ngIf="!email?.valid && (email?.dirty ||email?.touched)">
+                    Enter valid email address
+                  </div>
+            <label for="email"  class="text-secondary">Email ID <span class="text-danger">*</span></label>
         </div>
         <div class="col-4 form-floating mb-3 mt-3">
             <input type="text"
                 class="reference-input form-control border-0 border-bottom border-secondary border-radius-0"
-                id="number" placeholder="number" name="number" >
+                id="number" placeholder="number" name="mobile" formControlName="mobile"  >
+                <div style="color: red;" class="div1" *ngIf="!mobile?.valid && (mobile?.dirty ||mobile?.touched)">
+                    Enter valid Phone number
+                  </div>
             <label for="number" class="text-secondary">Phone Number <span class="text-danger">*</span></label>
         </div>
     </div>
@@ -43,42 +58,58 @@
   <div class="head2">
     <p>REFERENCE 2</p>
   </div>
-  <form class="form-group pb-3" action="">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate class="form-group pb-3" action="">
     <div class="row">
         <div class="col-4 form-floating mb-3 mt-3 ">
-            <input type="text" class="reference-input form-control border-0 border-bottom border-secondary" id="name"
-                placeholder="Name" name="name">
-            <label for="name" class="text-secondary">Name <span class="text-danger">*</span></label>
+            <input type="text" class="reference-input form-control border-0 border-bottom border-secondary " id="name2"
+                placeholder="Name" name="name2" formControlName="name2">
+                <div style="color: red;"class="div1" *ngIf="!name2?.valid && (name2?.dirty ||name2?.touched)">
+                    Enter a valid name.
+                  </div>
+            <label for="name2" class="text-secondary">Name <span class="text-danger">*</span></label>
         </div>
         <div class="col-4 form-floating mb-3 mt-3">
             <input type="text" class="reference-input form-control border-0 border-bottom border-secondary"
-                id="designation" placeholder="Designation" name="designation">
-            <label for="designation" class="text-secondary">Designation <span class="text-danger">*</span></label>
+                id="designation2" placeholder="Designation" name="desg2" formControlName="desg2">
+                <div style="color: red;"class="div1" *ngIf="!desg2?.valid && (desg2?.dirty ||desg2?.touched)">
+                    Enter Designation.
+                  </div>
+            <label for="designation2" class="text-secondary">Designation <span class="text-danger">*</span></label>
         </div>
         <div class="col-4 form-floating mb-3 mt-3">
-            <input type="text" class="reference-input form-control border-0 border-bottom border-secondary" id="company"
-                placeholder="company" name="company">
-            <label for="company" class="text-secondary">Company <span class="text-danger">*</span></label>
+            <input type="text" class="reference-input form-control border-0 border-bottom border-secondary" id="company2"
+                placeholder="company"  name="company2" formControlName="company2">
+                <div style="color: red;"class="div1" *ngIf="!company2?.valid && (company2?.dirty ||company2?.touched)">
+                    Enter Company.
+                  </div>
+            <label for="company2" class="text-secondary">Company <span class="text-danger">*</span></label>
         </div>
     </div>
     <div class="row ">
         <div class="col-4 form-floating mb-3 mt-3">
-            <input type="text" class="reference-input form-control border-0 border-bottom border-secondary" id="email"
-                placeholder="email" name="email">
-            <label for="email" class="text-secondary">Email ID <span class="text-danger">*</span></label>
+            <input type="text" class="reference-input form-control border-0 border-bottom border-secondary" id="email2"
+            name="email2" formControlName="email2"  placeholder="email" >
+                <div style="color: red;"class="div1" *ngIf="!email2?.valid && (email2?.dirty ||email2?.touched)">
+                    Enter valid email address
+                  </div>
+            <label for="email2"  class="text-secondary">Email ID <span class="text-danger">*</span></label>
         </div>
         <div class="col-4 form-floating mb-3 mt-3">
             <input type="text"
                 class="reference-input form-control border-0 border-bottom border-secondary border-radius-0"
-                id="number" placeholder="number" name="number" >
-            <label for="number" class="text-secondary">Phone Number <span class="text-danger">*</span></label>
+                id="number2" placeholder="number" name="mobile2" formControlName="mobile2"  >
+                <div style="color: red;" class="div1" *ngIf="!mobile2?.valid && (mobile2?.dirty ||mobile2?.touched)">
+                    Enter valid Phone number
+                  </div>
+            <label for="number2" class="text-secondary">Phone Number <span class="text-danger">*</span></label>
         </div>
     </div>
-    <br>
-    <br>
-    <button style="float: left;" class="btn btn-outline-primary btn-lg">Exit</button>
-    <button style="float: right;" class="btn btn-primary btn-lg">Save & Continue</button>
-    <button style="float: right; margin-right: 10px;" class="btn btn-primary btn-lg">Save</button>
+    <br><br><br>
+    <button style="float: left; margin-top: 10px;" class="btn btn-outline-primary btn-lg">Exit</button>
+    <button style="float: right; margin-top: 10px;" class="btn btn-primary btn-lg">Save & Continue</button>
+    <button style="float: right; margin-top:10px;margin-right: 10px;" class="btn btn-primary btn-lg">Save</button>
 </form>
+
   </div>
 </div>
+
