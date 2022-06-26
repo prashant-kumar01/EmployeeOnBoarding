@@ -1,0 +1,84 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box2 {
+    margin-top: 100px;
+    width: 90%;
+    height: 500px;
+    box-shadow: rgba(104, 102, 102, 0.705) 0px 5px 15px;
+  }
+  .head p{
+    color: #c0c0ff;
+  }
+  .head
+  {
+    height: 30px;
+    width: 140px;
+    border-top: 3px solid #c0c0ff;
+    border-left:3px solid #c0c0ff ;
+    border-right:3px solid #c0c0ff;
+    border-bottom: 0;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .head2
+  {
+    margin-left: 20px;
+    color: black;
+    height: 25px;
+    width: 95%;
+    background-color: #e8e5e5be;
+    padding-left: 10px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    }
+    input, select {
+   
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+    }
+    input:focus
+    {
+       outline: none
+    }
+    input::placeholder {
+    color: rgb(0, 0, 0);
+    }
+
+.row{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.line-left {
+  width: 3%;
+}
+.line-right {
+  width: 89%;
+}
+.reference-component {
+  background-color: rgba(212, 212, 212, 0.625);
+}
+.reference-header
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.reference-input {
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding-left: 0px;
+}
+.form-control:focus{
+  box-shadow:none;
+}

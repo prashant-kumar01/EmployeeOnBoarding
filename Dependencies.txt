@@ -1,0 +1,13 @@
+Node modules->
+
+npm install
+
+BootStrap
+
+npm install bootstrap
+
+jQuery
+npm install jquery
+
+
+
